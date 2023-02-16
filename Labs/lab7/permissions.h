@@ -1,0 +1,62 @@
+#ifndef __PERMISSIONS_H_
+#define __PERMISSIONS_H_
+
+#include <sys/stat.h> /* permission flags */
+
+#define P001 S_IXOTH
+#define P010 S_IXGRP
+#define P011 S_IXGRP | S_IXOTH
+#define P100 S_IXUSR
+#define P101 S_IXUSR | S_IXOTH
+#define P110 S_IXUSR | S_IXGRP
+#define P111 S_IXUSR | S_IXGRP | S_IXOTH
+
+#define P002 S_IWOTH
+#define P020 S_IWGRP
+#define P022 S_IWGRP | S_IWOTH
+#define P200 S_IWUSR
+#define P202 S_IWUSR | S_IWOTH
+#define P220 S_IWUSR | S_IWGRP
+#define P222 S_IWUSR | S_IWGRP | S_IWOTH
+
+#define P003 S_IXOTH | S_IWOTH
+#define P030 S_IXGRP | S_IWGRP
+#define P033 S_IXGRP | S_IWGRP | S_IXOTH | S_IWOTH
+#define P300 S_IXUSR | S_IWUSR
+#define P303 S_IXUSR | S_IWUSR | S_IXOTH | S_IWOTH
+#define P330 S_IXUSR | S_IWUSR | S_IXGRP | S_IWGRP
+#define P333 S_IXUSR | S_IWUSR | S_IXGRP | S_IWGRP | S_IXOTH | S_IWOTH
+
+#define P004 S_IROTH
+#define P040 S_IRGRP
+#define P044 S_IRGRP | S_IROTH
+#define P400 S_IRUSR
+#define P404 S_IRUSR | S_IROTH
+#define P440 S_IRUSR | S_IRGRP
+#define P444 S_IRUSR | S_IRGRP | S_IROTH
+
+#define P005 S_IROTH | S_IXOTH
+#define P050 S_IRGRP | S_IXGRP
+#define P055 S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH
+#define P500 S_IRUSR | S_IXUSR
+#define P505 S_IRUSR | S_IXUSR | S_IROTH | S_IXOTH
+#define P550 S_IRUSR | S_IXUSR | S_IRGRP | S_IXGRP
+#define P555 S_IRUSR | S_IXUSR | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH
+
+#define P006 S_IROTH | S_IWOTH
+#define P060 S_IRGRP | S_IWGRP
+#define P066 S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH
+#define P600 S_IRUSR | S_IWUSR
+#define P606 S_IRUSR | S_IWUSR | S_IROTH | S_IWOTH
+#define P660 S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP
+#define P666 S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH
+
+#define P007 S_IRWXO
+#define P070 S_IRWXG
+#define P077 S_IRWXG | S_IRWXO
+#define P700 S_IRWXU
+#define P707 S_IRWXU | S_IRWXO
+#define P770 S_IRWXU | S_IRWXG
+#define P777 S_IRWXU | S_IRWXG | S_IRWXO
+
+#endif
